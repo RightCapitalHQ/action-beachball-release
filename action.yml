@@ -1,0 +1,15 @@
+name: Beachball release
+description: Create GitHub releases for a beachball managed project.
+inputs:
+  tag:
+    description: Name of the git tag created by beachball, e.g. `package_v1.2.3` or `@scope/package_v1.2.3`
+    required: true
+  token:
+    description: 'GITHUB_TOKEN for creating GitHub release'
+    required: true
+  repo-url:
+    description: 'Repository URL for creating CHANGELOG link, e.g. `github.server_url/github.repository`'
+    required: true
+runs:
+  using: 'node20'
+  main: dist/index.js

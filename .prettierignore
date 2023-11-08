@@ -1,0 +1,5 @@
+# pnpm managed files
+pnpm-lock.yaml
+
+# compiled code
+/dist
