@@ -31,14 +31,26 @@ export function generateReleaseNotes({
   changelogJsonPath,
   repoUrl,
 }: {
-  changelogJsonEntry: ChangelogJsonEntry;
+  changelogJsonEntry: ChangelogJsonEntry | null;
   changelogJsonPath: string;
   repoUrl: string;
 }): string {
   const repoBlobUrl: string = `${repoUrl}/blob/-`;
 
   const changeTypes: ChangeType[] = ['major', 'minor', 'patch', 'none'];
-  const releaseNotes = `## What's Changed
+
+  if (!changelogJsonEntry) {
+    return `## What's Changed
+
+Version bump only for package.
+
+**Full Changelog**: ${repoBlobUrl}/${relative(
+      process.cwd(),
+      dirname(changelogJsonPath),
+    )}/CHANGELOG.md`;
+  }
+
+  return `## What's Changed
 
 ${changeTypes
   .map((changeType) => {
@@ -63,12 +75,14 @@ ${changeTypes
     process.cwd(),
     dirname(changelogJsonPath),
   )}/CHANGELOG.md`;
-
-  return releaseNotes;
 }
 
+export interface IGetChangelogJsonResult {
+  changelogJsonEntry: ChangelogJsonEntry | null;
+  changelogJsonPath: string;
+}
 /**
- * @throws {Error} if cannot find changelog for package
+ * @returns undefined if cannot find changelog for the package, we consider it's a version bump only release
  */
 export async function getChangelogJson({
   name,
@@ -76,13 +90,12 @@ export async function getChangelogJson({
 }: {
   name: string;
   version: string;
-}): Promise<{
-  changelogJsonEntry: ChangelogJsonEntry;
-  changelogJsonPath: string;
-}> {
+}): Promise<IGetChangelogJsonResult> {
   const globber = await glob.create(`**/CHANGELOG.json`, {
     followSymbolicLinks: false,
   });
+
+  let resolvedChangelogJsonPath: string | undefined;
   for await (const changelogJsonPath of globber.globGenerator()) {
     const changelogJson = JSON.parse(
       await readFile(changelogJsonPath, 'utf-8'),
@@ -92,6 +105,7 @@ export async function getChangelogJson({
       // eslint-disable-next-line no-continue
       continue;
     }
+    resolvedChangelogJsonPath = changelogJsonPath;
 
     core.info(`Found changelog for package ${name} at ${changelogJsonPath}`);
     const currentChangelog = changelogJson.entries.find(
@@ -106,7 +120,20 @@ export async function getChangelogJson({
 
     return { changelogJsonEntry: currentChangelog, changelogJsonPath };
   }
-  const message = `Cannot find changelog for package ${name}@${version}`;
-  core.error(message);
-  throw new Error(message);
+  if (!resolvedChangelogJsonPath) {
+    throw new Error(`Cannot find changelog for package ${name}`);
+  }
+
+  /**
+   * if we reach here, we assume it's a version bump only release for a package
+   * since beachball doesn't generate CHANGELOG.json entry for this case
+   * @see https://github.com/microsoft/beachball/issues/252
+   */
+  core.info(
+    `Cannot find changelog for package ${name}@${version}, assuming it's a version bump only release`,
+  );
+  return {
+    changelogJsonEntry: null,
+    changelogJsonPath: resolvedChangelogJsonPath,
+  };
 }
