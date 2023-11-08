@@ -29374,20 +29374,90 @@ var __importStar = (this && this.__importStar) || function (mod) {
     return result;
 };
 Object.defineProperty(exports, "__esModule", ({ value: true }));
-const promises_1 = __nccwpck_require__(3977);
-const node_path_1 = __nccwpck_require__(9411);
 const core = __importStar(__nccwpck_require__(9093));
 const exec_1 = __nccwpck_require__(7775);
-const glob = __importStar(__nccwpck_require__(6445));
+const util_1 = __nccwpck_require__(8438);
 const token = core.getInput('token', { required: true });
 core.setSecret(token);
 const repoUrl = core.getInput('repo-url', { required: true });
 const gitTag = core.getInput('tag', { required: true });
-const repoBlobUrl = `${repoUrl}/blob/-`;
+async function main() {
+    const parsedTag = (0, util_1.parseGitTag)(gitTag);
+    if (!parsedTag) {
+        const message = `Cannot extract package name and version from git tag: ${gitTag}, exiting...`;
+        core.error(message);
+        throw new Error(message);
+    }
+    const { name, version } = parsedTag;
+    core.info(`Detected package name: ${name}, version: ${version}`);
+    const { changelogJsonEntry, changelogJsonPath } = await (0, util_1.getChangelogJson)({
+        name,
+        version,
+    });
+    const releaseNotes = (0, util_1.generateReleaseNotes)({
+        changelogJsonEntry,
+        changelogJsonPath,
+        repoUrl,
+    });
+    core.info(`Generated release notes:\n${releaseNotes}\n`);
+    core.info(`Creating GitHub release...`);
+    await (0, exec_1.exec)('gh', ['release', 'create', gitTag, '--title', gitTag, '--notes', releaseNotes], {
+        env: {
+            ...process.env,
+            GH_TOKEN: token,
+        },
+    });
+}
+void main().catch((e) => {
+    if (e instanceof Error) {
+        core.setFailed(e.message);
+    }
+    else {
+        core.setFailed(`Unknown error: ${e}`);
+    }
+});
+
+
+/***/ }),
+
+/***/ 8438:
+/***/ (function(__unused_webpack_module, exports, __nccwpck_require__) {
+
+"use strict";
+
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    __setModuleDefault(result, mod);
+    return result;
+};
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+exports.getChangelogJson = exports.generateReleaseNotes = exports.parseGitTag = void 0;
+const promises_1 = __nccwpck_require__(3977);
+const node_path_1 = __nccwpck_require__(9411);
+const core = __importStar(__nccwpck_require__(9093));
+const glob = __importStar(__nccwpck_require__(6445));
 function parseGitTag(tag) {
     // @scope/package_v1.0.0
     // package_v1.0.0
-    const beachballTagPattern = /^(?<name>(?:@[\w\-.]+\/)?[\w\-.]+)_v(?<version>\d\.\d\.\d.*)$/;
+    const beachballTagPattern = /^(?<name>(?:@[\w\-.]+\/)?[\w\-.]+)_v(?<version>\d+\.\d+\.\d+.*)$/;
     const match = tag.match(beachballTagPattern);
     if (match) {
         // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
@@ -29396,16 +29466,18 @@ function parseGitTag(tag) {
     }
     return undefined;
 }
+exports.parseGitTag = parseGitTag;
 /**
  * TODO: make this configurable?
  */
-function generateReleaseNotes(changelogJson, changelogJsonPath) {
+function generateReleaseNotes({ changelogJsonEntry, changelogJsonPath, repoUrl, }) {
+    const repoBlobUrl = `${repoUrl}/blob/-`;
     const changeTypes = ['major', 'minor', 'patch', 'none'];
     const releaseNotes = `## What's Changed
 
 ${changeTypes
         .map((changeType) => {
-        const entryList = changelogJson.comments[changeType];
+        const entryList = changelogJsonEntry.comments[changeType];
         if (entryList) {
             return entryList
                 .map((changelogEntry) => {
@@ -29424,6 +29496,7 @@ ${changeTypes
 **Full Changelog**: ${repoBlobUrl}/${(0, node_path_1.relative)(process.cwd(), (0, node_path_1.dirname)(changelogJsonPath))}/CHANGELOG.md`;
     return releaseNotes;
 }
+exports.generateReleaseNotes = generateReleaseNotes;
 /**
  * @throws {Error} if cannot find changelog for package
  */
@@ -29444,43 +29517,13 @@ async function getChangelogJson({ name, version, }) {
             // eslint-disable-next-line no-continue
             continue;
         }
-        return { changelogEntry: currentChangelog, changelogJsonPath };
+        return { changelogJsonEntry: currentChangelog, changelogJsonPath };
     }
-    const message = `Cannot find changelog for package ${name} at ${gitTag}`;
+    const message = `Cannot find changelog for package ${name}@${version}`;
     core.error(message);
     throw new Error(message);
 }
-async function main() {
-    const parsedTag = parseGitTag(gitTag);
-    if (!parsedTag) {
-        const message = `Cannot extract package name and version from git tag: ${gitTag}, exiting...`;
-        core.error(message);
-        throw new Error(message);
-    }
-    const { name, version } = parsedTag;
-    core.info(`Detected package name: ${name}, version: ${version}`);
-    const { changelogEntry, changelogJsonPath } = await getChangelogJson({
-        name,
-        version,
-    });
-    const releaseNotes = generateReleaseNotes(changelogEntry, changelogJsonPath);
-    core.info(`Generated release notes:\n${releaseNotes}\n`);
-    core.info(`Creating GitHub release...`);
-    await (0, exec_1.exec)('gh', ['release', 'create', gitTag, '--title', gitTag, '--notes', releaseNotes], {
-        env: {
-            ...process.env,
-            GH_TOKEN: token,
-        },
-    });
-}
-void main().catch((e) => {
-    if (e instanceof Error) {
-        core.setFailed(e.message);
-    }
-    else {
-        core.setFailed(`Unknown error: ${e}`);
-    }
-});
+exports.getChangelogJson = getChangelogJson;
 
 
 /***/ }),

@@ -19,5 +19,11 @@ module.exports = {
         'import/no-extraneous-dependencies': 'off',
       },
     },
+    {
+      files: ['src/**/*.test.ts'],
+      rules: {
+        'import/no-extraneous-dependencies': 'off',
+      },
+    },
   ],
 };
