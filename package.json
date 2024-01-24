@@ -31,7 +31,7 @@
     "@commitlint/cli": "18.2.0",
     "@commitlint/config-conventional": "18.1.0",
     "@commitlint/cz-commitlint": "18.2.0",
-    "@rightcapital/eslint-config-javascript": "13.0.0",
+    "@rightcapital/eslint-config-javascript": "18.0.0",
     "@rightcapital/eslint-config-typescript": "13.0.0",
     "@rightcapital/prettier-config": "6.0.4",
     "@types/node": "20.8.10",
