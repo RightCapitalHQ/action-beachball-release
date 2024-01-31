@@ -1,5 +1,5 @@
 import { describe, test } from 'vitest';
-import { IParseGitTagResult, parseGitTag } from './util';
+import { type IParseGitTagResult, parseGitTag } from './util';
 
 describe.concurrent('parseGitTag', () => {
   for (const [tag, expected] of [
