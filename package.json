@@ -14,7 +14,7 @@
     "lint": "concurrently 'npm:lint:*'",
     "lint:eslint": "eslint --max-warnings=0 .",
     "lint:prettier": "prettier --check .",
-    "prepare": "husky install",
+    "prepare": "husky",
     "test": "vitest"
   },
   "config": {
