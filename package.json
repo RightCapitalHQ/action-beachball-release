@@ -9,7 +9,7 @@
   "main": "dist/index.js",
   "scripts": {
     "build": "ncc build src/index.ts -o dist",
-    "fix": "pnpm run fix:eslint && pnpm run fix:prettier",
+    "fix": "pnpm run fix:prettier-eslint",
     "fix:prettier-eslint": "eslint --fix . && prettier --write .",
     "lint": "concurrently 'npm:lint:*'",
     "lint:eslint": "eslint --max-warnings=0 .",
