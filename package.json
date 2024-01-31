@@ -14,7 +14,7 @@
     "lint": "concurrently 'npm:lint:*'",
     "lint:eslint": "eslint --max-warnings=0 .",
     "lint:prettier": "prettier --check .",
-    "prepare": "husky install",
+    "prepare": "husky",
     "test": "vitest"
   },
   "config": {
@@ -40,7 +40,7 @@
     "commitizen": "4.3.0",
     "concurrently": "8.2.2",
     "eslint": "8.53.0",
-    "husky": "8.0.3",
+    "husky": "9.0.7",
     "prettier": "3.0.3",
     "prettier-plugin-packagejson": "2.4.6",
     "typescript": "5.2.2",
