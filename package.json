@@ -28,25 +28,25 @@
     "@actions/glob": "0.4.0"
   },
   "devDependencies": {
-    "@commitlint/cli": "18.6.0",
-    "@commitlint/config-conventional": "18.6.0",
-    "@commitlint/cz-commitlint": "18.6.0",
+    "@commitlint/cli": "18.6.1",
+    "@commitlint/config-conventional": "18.6.2",
+    "@commitlint/cz-commitlint": "18.6.1",
     "@rightcapital/eslint-config-javascript": "19.0.0",
     "@rightcapital/eslint-config-typescript": "19.0.0",
     "@rightcapital/prettier-config": "6.0.12",
-    "@types/node": "20.11.16",
+    "@types/node": "20.11.19",
     "@vercel/ncc": "0.38.1",
     "beachball": "2.39.0",
     "commitizen": "4.3.0",
     "concurrently": "8.2.2",
     "eslint": "8.56.0",
-    "husky": "9.0.10",
-    "prettier": "3.2.4",
-    "prettier-plugin-packagejson": "2.4.10",
+    "husky": "9.0.11",
+    "prettier": "3.2.5",
+    "prettier-plugin-packagejson": "2.4.11",
     "typescript": "5.3.3",
-    "vitest": "1.2.2"
+    "vitest": "1.3.0"
   },
-  "packageManager": "pnpm@8.15.1",
+  "packageManager": "pnpm@8.15.3",
   "engines": {
     "node": ">=20.0.0"
   }
