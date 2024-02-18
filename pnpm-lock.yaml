@@ -26,14 +26,14 @@ devDependencies:
     specifier: 18.6.1
     version: 18.6.1(@types/node@20.11.19)(commitizen@4.3.0)(inquirer@8.2.6)(typescript@5.3.3)
   '@rightcapital/eslint-config-javascript':
-    specifier: 19.0.0
-    version: 19.0.0(@typescript-eslint/parser@6.20.0)(eslint@8.56.0)
+    specifier: 19.0.1
+    version: 19.0.1(@typescript-eslint/parser@6.20.0)(eslint@8.56.0)
   '@rightcapital/eslint-config-typescript':
-    specifier: 19.0.0
-    version: 19.0.0(eslint@8.56.0)(typescript@5.3.3)
+    specifier: 19.0.1
+    version: 19.0.1(eslint@8.56.0)(typescript@5.3.3)
   '@rightcapital/prettier-config':
-    specifier: 6.0.12
-    version: 6.0.12(prettier@3.2.5)
+    specifier: 6.0.13
+    version: 6.0.13(prettier@3.2.5)
   '@types/node':
     specifier: 20.11.19
     version: 20.11.19
@@ -626,8 +626,8 @@ packages:
     engines: {node: ^12.20.0 || ^14.18.0 || >=16.0.0}
     dev: true
 
-  /@rightcapital/eslint-config-base@19.0.0(@typescript-eslint/parser@6.20.0)(eslint@8.56.0):
-    resolution: {integrity: sha512-QKpBDFAWhNI4vjBpSB1r/J9T7Qs2FWWxZgTyA6qmml/GClVl28QsCA75gKhoMXAxZ3++W3iMJo9eEtDJgPFPnQ==}
+  /@rightcapital/eslint-config-base@19.0.1(@typescript-eslint/parser@6.20.0)(eslint@8.56.0):
+    resolution: {integrity: sha512-Sv89EuTmEqP2BeeWkzB2cbI/GlYPG5mhqFsHjChc1SxXBChCINVs2kc6sGoRwdTqWxX1qcDlbEzT3ouJiDn1sw==}
     engines: {node: '>=16.0.0'}
     peerDependencies:
       eslint: ^8.23.1
@@ -644,13 +644,13 @@ packages:
       - supports-color
     dev: true
 
-  /@rightcapital/eslint-config-javascript@19.0.0(@typescript-eslint/parser@6.20.0)(eslint@8.56.0):
-    resolution: {integrity: sha512-w0fRvbZ9qoFbj5fmGMjRgLUOJiXbHb7DER4D0G5ze14RQbq/Iw7fFzureWHJCcISuk9yY7AIIj+6/Jm54WWzCA==}
+  /@rightcapital/eslint-config-javascript@19.0.1(@typescript-eslint/parser@6.20.0)(eslint@8.56.0):
+    resolution: {integrity: sha512-Htc12mHZI5sNrxItNg8Y3sNHj7RFo91nCl6/05CG6Q9OmMqb9Y79+qo1PTm2usctCCKqur4+agyiqm0aztU+NQ==}
     engines: {node: '>=16.0.0'}
     peerDependencies:
       eslint: ^8.23.1
     dependencies:
-      '@rightcapital/eslint-config-base': 19.0.0(@typescript-eslint/parser@6.20.0)(eslint@8.56.0)
+      '@rightcapital/eslint-config-base': 19.0.1(@typescript-eslint/parser@6.20.0)(eslint@8.56.0)
       '@rushstack/eslint-patch': 1.7.2
       eslint: 8.56.0
       eslint-config-prettier: 9.1.0(eslint@8.56.0)
@@ -661,14 +661,14 @@ packages:
       - supports-color
     dev: true
 
-  /@rightcapital/eslint-config-typescript@19.0.0(eslint@8.56.0)(typescript@5.3.3):
-    resolution: {integrity: sha512-Mwph+ie/Ph5RwRbsesSe/K2GDpP4ZJ7FuWLuBOnmhEZydJH36bd0LGgVJMP9lfzJ4QJqeVNIk93P3GTukqO6Iw==}
+  /@rightcapital/eslint-config-typescript@19.0.1(eslint@8.56.0)(typescript@5.3.3):
+    resolution: {integrity: sha512-ZgD/SQRgPRZPNSBTPE9nm27f3VfT+b68/Z12NZTlyW4jeMovlvVoZFDRV+Qiw9xa58qtZKq488mO2QMWb8tgKw==}
     engines: {node: '>=16.0.0'}
     peerDependencies:
       eslint: ^8.23.1
       typescript: ^5.0.0
     dependencies:
-      '@rightcapital/eslint-config-base': 19.0.0(@typescript-eslint/parser@6.20.0)(eslint@8.56.0)
+      '@rightcapital/eslint-config-base': 19.0.1(@typescript-eslint/parser@6.20.0)(eslint@8.56.0)
       '@rushstack/eslint-patch': 1.7.2
       '@typescript-eslint/eslint-plugin': 6.20.0(@typescript-eslint/parser@6.20.0)(eslint@8.56.0)(typescript@5.3.3)
       '@typescript-eslint/parser': 6.20.0(eslint@8.56.0)(typescript@5.3.3)
@@ -681,8 +681,8 @@ packages:
       - supports-color
     dev: true
 
-  /@rightcapital/prettier-config@6.0.12(prettier@3.2.5):
-    resolution: {integrity: sha512-oNdf217obn/TlVSP+r/RMKW1dWMyA2iD/H9w33SMuxag3neZMRGs0OdwxeC7eJFpxm3vnz32W8Ej+iSjOBrpmQ==}
+  /@rightcapital/prettier-config@6.0.13(prettier@3.2.5):
+    resolution: {integrity: sha512-Yk64ZtquWAHtsgIIs/cB6ab0m54Yn35BgdRJ3PtU8mpCkU07pyHKXlAw1rTGFD7OLVLLPc2uOpmuU4PdQ1dH9Q==}
     engines: {node: '>=16.0.0'}
     peerDependencies:
       prettier: ^3.0.0
