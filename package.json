@@ -36,7 +36,7 @@
     "@rightcapital/prettier-config": "6.0.14",
     "@types/node": "20.11.20",
     "@vercel/ncc": "0.38.1",
-    "beachball": "2.39.0",
+    "beachball": "2.40.0",
     "commitizen": "4.3.0",
     "concurrently": "8.2.2",
     "eslint": "8.57.0",
