@@ -34,7 +34,7 @@
     "@rightcapital/eslint-config-javascript": "19.0.2",
     "@rightcapital/eslint-config-typescript": "19.0.2",
     "@rightcapital/prettier-config": "6.0.14",
-    "@types/node": "20.11.21",
+    "@types/node": "20.11.22",
     "@vercel/ncc": "0.38.1",
     "beachball": "2.40.0",
     "commitizen": "4.3.0",
