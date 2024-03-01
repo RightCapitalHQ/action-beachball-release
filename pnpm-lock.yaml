@@ -26,8 +26,8 @@ devDependencies:
     specifier: 18.6.1
     version: 18.6.1(@types/node@20.11.24)(commitizen@4.3.0)(inquirer@8.2.6)(typescript@5.3.3)
   '@rightcapital/eslint-config-javascript':
-    specifier: 19.0.2
-    version: 19.0.2(@typescript-eslint/parser@6.20.0)(eslint@8.57.0)
+    specifier: 20.0.0
+    version: 20.0.0(@typescript-eslint/parser@6.20.0)(eslint@8.57.0)
   '@rightcapital/eslint-config-typescript':
     specifier: 19.0.2
     version: 19.0.2(eslint@8.57.0)(typescript@5.3.3)
@@ -644,13 +644,31 @@ packages:
       - supports-color
     dev: true
 
-  /@rightcapital/eslint-config-javascript@19.0.2(@typescript-eslint/parser@6.20.0)(eslint@8.57.0):
-    resolution: {integrity: sha512-xEFDPlKssBjZDHd7d+Tn0dvSmmlLp/syKlNWuTiezm9x+RiQtFdmxrlD9HTepADquHk3NfIy+Wmq3YFmqf8gxA==}
+  /@rightcapital/eslint-config-base@20.0.0(@typescript-eslint/parser@6.20.0)(eslint@8.57.0):
+    resolution: {integrity: sha512-FIgZQyfkN8Mk8xctvjoY3RCWE7TDuMSqOAf61+BpYzRIo3w1KbAiLT/YdWTi20mowQdcZf1usHLjDcw9YLtYBQ==}
     engines: {node: '>=16.0.0'}
     peerDependencies:
       eslint: ^8.23.1
     dependencies:
-      '@rightcapital/eslint-config-base': 19.0.2(@typescript-eslint/parser@6.20.0)(eslint@8.57.0)
+      '@rushstack/eslint-patch': 1.7.2
+      eslint: 8.57.0
+      eslint-config-airbnb-base: 15.0.0(eslint-plugin-i@2.29.1)(eslint@8.57.0)
+      eslint-import-resolver-typescript: 3.6.1(@typescript-eslint/parser@6.20.0)(eslint-plugin-i@2.29.1)(eslint@8.57.0)
+      eslint-plugin-import: /eslint-plugin-i@2.29.1(@typescript-eslint/parser@6.20.0)(eslint-import-resolver-typescript@3.6.1)(eslint@8.57.0)
+    transitivePeerDependencies:
+      - '@typescript-eslint/parser'
+      - eslint-import-resolver-node
+      - eslint-import-resolver-webpack
+      - supports-color
+    dev: true
+
+  /@rightcapital/eslint-config-javascript@20.0.0(@typescript-eslint/parser@6.20.0)(eslint@8.57.0):
+    resolution: {integrity: sha512-URtAEbMJBmwbF03//8hIMnhdaT0UOoiOvpg4ynC/xb4IboGYSKEUT2w4PVBceq6FjEfXQCOL6kKy3sdHsayVZA==}
+    engines: {node: '>=16.0.0'}
+    peerDependencies:
+      eslint: ^8.23.1
+    dependencies:
+      '@rightcapital/eslint-config-base': 20.0.0(@typescript-eslint/parser@6.20.0)(eslint@8.57.0)
       '@rushstack/eslint-patch': 1.7.2
       eslint: 8.57.0
       eslint-config-prettier: 9.1.0(eslint@8.57.0)
