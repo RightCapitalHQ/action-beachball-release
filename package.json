@@ -29,7 +29,7 @@
   },
   "devDependencies": {
     "@commitlint/cli": "18.6.1",
-    "@commitlint/config-conventional": "18.6.2",
+    "@commitlint/config-conventional": "18.6.3",
     "@commitlint/cz-commitlint": "18.6.1",
     "@rightcapital/eslint-config-javascript": "20.1.0",
     "@rightcapital/eslint-config-typescript": "20.1.0",
