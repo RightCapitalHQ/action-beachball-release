@@ -26,8 +26,8 @@ devDependencies:
     specifier: 19.2.0
     version: 19.2.0(@types/node@20.11.30)(commitizen@4.3.0)(inquirer@9.2.16)(typescript@5.4.3)
   '@rightcapital/eslint-config-javascript':
-    specifier: 20.1.2
-    version: 20.1.2(@typescript-eslint/parser@7.1.0)(eslint@8.57.0)
+    specifier: 21.0.0
+    version: 21.0.0(@typescript-eslint/parser@7.1.0)(eslint@8.57.0)
   '@rightcapital/eslint-config-typescript':
     specifier: 20.1.2
     version: 20.1.2(eslint@8.57.0)(typescript@5.4.3)
@@ -649,14 +649,32 @@ packages:
       - supports-color
     dev: true
 
-  /@rightcapital/eslint-config-javascript@20.1.2(@typescript-eslint/parser@7.1.0)(eslint@8.57.0):
-    resolution: {integrity: sha512-dmzZxC0Gulj/jH8o5ukjiFJOuwTcIDH98dpXlfRA9NAia28wNFcouIf3uNnR63MeYURVOn+NNB8iKZp4RpFxwg==}
+  /@rightcapital/eslint-config-base@21.0.0(@typescript-eslint/parser@7.1.0)(eslint@8.57.0):
+    resolution: {integrity: sha512-khsit6gPPUgXCR/okuaqvdcfUmH/JC+aF83MQ+2/3i0/3d7JmmhqCqbNvQFB2+TDHQdVQ/727CISy1Qwz+ESfQ==}
     engines: {node: '>=16.0.0'}
     peerDependencies:
       eslint: ^8.23.1
     dependencies:
-      '@rightcapital/eslint-config-base': 20.1.2(@typescript-eslint/parser@7.1.0)(eslint@8.57.0)
-      '@rushstack/eslint-patch': 1.7.2
+      '@rushstack/eslint-patch': 1.9.0
+      eslint: 8.57.0
+      eslint-config-airbnb-base: 15.0.0(eslint-plugin-i@2.29.1)(eslint@8.57.0)
+      eslint-import-resolver-typescript: 3.6.1(@typescript-eslint/parser@7.1.0)(eslint-plugin-i@2.29.1)(eslint@8.57.0)
+      eslint-plugin-import: /eslint-plugin-i@2.29.1(@typescript-eslint/parser@7.1.0)(eslint-import-resolver-typescript@3.6.1)(eslint@8.57.0)
+    transitivePeerDependencies:
+      - '@typescript-eslint/parser'
+      - eslint-import-resolver-node
+      - eslint-import-resolver-webpack
+      - supports-color
+    dev: true
+
+  /@rightcapital/eslint-config-javascript@21.0.0(@typescript-eslint/parser@7.1.0)(eslint@8.57.0):
+    resolution: {integrity: sha512-iDgdCgyregFy9hIibYFgntv5KfL6JBjmQrEs361IGHG/vPsBlHzZZEyRA0o4N15Pmhpm5UKyv6PV3CKMqkkZtw==}
+    engines: {node: '>=16.0.0'}
+    peerDependencies:
+      eslint: ^8.23.1
+    dependencies:
+      '@rightcapital/eslint-config-base': 21.0.0(@typescript-eslint/parser@7.1.0)(eslint@8.57.0)
+      '@rushstack/eslint-patch': 1.9.0
       eslint: 8.57.0
       eslint-config-prettier: 9.1.0(eslint@8.57.0)
     transitivePeerDependencies:
@@ -801,6 +819,10 @@ packages:
 
   /@rushstack/eslint-patch@1.7.2:
     resolution: {integrity: sha512-RbhOOTCNoCrbfkRyoXODZp75MlpiHMgbE5MEBZAnnnLyQNgrigEj4p0lzsMDyc1zVsJDLrivB58tgg3emX0eEA==}
+    dev: true
+
+  /@rushstack/eslint-patch@1.9.0:
+    resolution: {integrity: sha512-AAWymnpvHbGty1BmgbdfbqQDboXs6xN6h2yAacO4yKVyyUUBnpYkp+P9jjPrV9zrAGw7JVVriRtGOHPInnfjZQ==}
     dev: true
 
   /@sinclair/typebox@0.27.8:
