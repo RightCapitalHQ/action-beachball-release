@@ -28,14 +28,14 @@ importers:
         specifier: 19.2.0
         version: 19.2.0(@types/node@20.12.10)(commitizen@4.3.0(@types/node@20.12.10)(typescript@5.4.5))(inquirer@9.2.17)(typescript@5.4.5)
       '@rightcapital/eslint-config-javascript':
-        specifier: 22.1.0
-        version: 22.1.0(@typescript-eslint/parser@7.6.0(eslint@8.57.0)(typescript@5.4.5))(eslint@8.57.0)
+        specifier: 22.1.1
+        version: 22.1.1(@typescript-eslint/parser@7.6.0(eslint@8.57.0)(typescript@5.4.5))(eslint@8.57.0)
       '@rightcapital/eslint-config-typescript':
-        specifier: 22.1.0
-        version: 22.1.0(eslint@8.57.0)(typescript@5.4.5)
+        specifier: 22.1.1
+        version: 22.1.1(eslint@8.57.0)(typescript@5.4.5)
       '@rightcapital/prettier-config':
-        specifier: 7.0.2
-        version: 7.0.2(prettier@3.2.5)
+        specifier: 7.0.3
+        version: 7.0.3(prettier@3.2.5)
       '@types/node':
         specifier: 20.12.10
         version: 20.12.10
@@ -381,27 +381,27 @@ packages:
     resolution: {integrity: sha512-cq8o4cWH0ibXh9VGi5P20Tu9XF/0fFXl9EUinr9QfTM7a7p0oTA4iJRCQWppXR1Pg8dSM0UCItCkPwsk9qWWYA==}
     engines: {node: ^12.20.0 || ^14.18.0 || >=16.0.0}
 
-  '@rightcapital/eslint-config-base@22.1.0':
-    resolution: {integrity: sha512-UQqeKbMhE80fWKogIROkpg4CpNV8k8Aw8ZZ16K2VQ+/P03UkANuds6lxhrsI5hlbvDvJm6pSL6p0SYIoGx+/RA==}
+  '@rightcapital/eslint-config-base@22.1.1':
+    resolution: {integrity: sha512-TmWLn1DMstklGav7nsn/evcO5PvsPkBlNvFH4BiEXD2su0LiRvWXl2v12IyU5BWY0Vo3gEHAaJb6eRhs6dROlw==}
     engines: {node: '>=16.0.0'}
     peerDependencies:
       eslint: ^8.23.1
 
-  '@rightcapital/eslint-config-javascript@22.1.0':
-    resolution: {integrity: sha512-wnKW7VEq8tP/EKmNP2aRO01cY3XlzCUWJ72aGNfUG1+CDorxcsjZLLpMRV6giqbSG02wzHr+nHoXaVGjkIsbFQ==}
+  '@rightcapital/eslint-config-javascript@22.1.1':
+    resolution: {integrity: sha512-h0egjcHsje0iCYUwZjBShtQbEfoxxATfiI8aehYOycW1QzoPtUKJg9myXtewAXqS4YWGz9kqqZpDanLZ19nAvw==}
     engines: {node: '>=16.0.0'}
     peerDependencies:
       eslint: ^8.23.1
 
-  '@rightcapital/eslint-config-typescript@22.1.0':
-    resolution: {integrity: sha512-TTBegToKCVZ5bzNoOVGm+K3+iILUA9oxEt6BoNQOWbZOyJSqtGjd1H1AOTVLvdmcTCFv7tjBR4Py/vceRCb99w==}
+  '@rightcapital/eslint-config-typescript@22.1.1':
+    resolution: {integrity: sha512-rFIEwvZltwfEjwjWbvV/4OmIBkQM4c668zFR1HokkvHTCaqHKglJlSNUKpkKusJdbD9KBglnBM1oYKxEMNDSLA==}
     engines: {node: '>=16.0.0'}
     peerDependencies:
       eslint: ^8.23.1
       typescript: ^5.0.0
 
-  '@rightcapital/prettier-config@7.0.2':
-    resolution: {integrity: sha512-jciQ5QLwlpO+M263shrMgMVXoq/We1W+Xq+0km4wczVw/fbk3SEJGBnRHq9md69ko0pdgsytJIgTXjJWO825GA==}
+  '@rightcapital/prettier-config@7.0.3':
+    resolution: {integrity: sha512-LYpJjRiLdb521GuzrkvZ/xldVF/FOGTdUpfnQEM0d4VZTwf6DQnvw6acGkHOS3wuOMUmWODwX5Wfhr8+WZNMSQ==}
     engines: {node: '>=16.0.0'}
     peerDependencies:
       prettier: ^3.0.0
@@ -2405,7 +2405,7 @@ snapshots:
 
   '@pkgr/core@0.1.1': {}
 
-  '@rightcapital/eslint-config-base@22.1.0(@typescript-eslint/parser@7.6.0(eslint@8.57.0)(typescript@5.4.5))(eslint@8.57.0)':
+  '@rightcapital/eslint-config-base@22.1.1(@typescript-eslint/parser@7.6.0(eslint@8.57.0)(typescript@5.4.5))(eslint@8.57.0)':
     dependencies:
       '@rushstack/eslint-patch': 1.10.2
       eslint: 8.57.0
@@ -2418,9 +2418,9 @@ snapshots:
       - eslint-import-resolver-webpack
       - supports-color
 
-  '@rightcapital/eslint-config-javascript@22.1.0(@typescript-eslint/parser@7.6.0(eslint@8.57.0)(typescript@5.4.5))(eslint@8.57.0)':
+  '@rightcapital/eslint-config-javascript@22.1.1(@typescript-eslint/parser@7.6.0(eslint@8.57.0)(typescript@5.4.5))(eslint@8.57.0)':
     dependencies:
-      '@rightcapital/eslint-config-base': 22.1.0(@typescript-eslint/parser@7.6.0(eslint@8.57.0)(typescript@5.4.5))(eslint@8.57.0)
+      '@rightcapital/eslint-config-base': 22.1.1(@typescript-eslint/parser@7.6.0(eslint@8.57.0)(typescript@5.4.5))(eslint@8.57.0)
       '@rushstack/eslint-patch': 1.10.2
       eslint: 8.57.0
       eslint-config-prettier: 9.1.0(eslint@8.57.0)
@@ -2430,9 +2430,9 @@ snapshots:
       - eslint-import-resolver-webpack
       - supports-color
 
-  '@rightcapital/eslint-config-typescript@22.1.0(eslint@8.57.0)(typescript@5.4.5)':
+  '@rightcapital/eslint-config-typescript@22.1.1(eslint@8.57.0)(typescript@5.4.5)':
     dependencies:
-      '@rightcapital/eslint-config-base': 22.1.0(@typescript-eslint/parser@7.6.0(eslint@8.57.0)(typescript@5.4.5))(eslint@8.57.0)
+      '@rightcapital/eslint-config-base': 22.1.1(@typescript-eslint/parser@7.6.0(eslint@8.57.0)(typescript@5.4.5))(eslint@8.57.0)
       '@rushstack/eslint-patch': 1.10.2
       '@typescript-eslint/eslint-plugin': 7.6.0(@typescript-eslint/parser@7.6.0(eslint@8.57.0)(typescript@5.4.5))(eslint@8.57.0)(typescript@5.4.5)
       '@typescript-eslint/parser': 7.6.0(eslint@8.57.0)(typescript@5.4.5)
@@ -2444,7 +2444,7 @@ snapshots:
       - eslint-import-resolver-webpack
       - supports-color
 
-  '@rightcapital/prettier-config@7.0.2(prettier@3.2.5)':
+  '@rightcapital/prettier-config@7.0.3(prettier@3.2.5)':
     dependencies:
       prettier: 3.2.5
       prettier-plugin-packagejson: 2.5.0(prettier@3.2.5)
