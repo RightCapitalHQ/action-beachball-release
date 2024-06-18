@@ -33,8 +33,8 @@
     "@commitlint/cz-commitlint": "19.2.0",
     "@rightcapital/eslint-config-javascript": "25.1.1",
     "@rightcapital/eslint-config-typescript": "25.1.1",
-    "@rightcapital/prettier-config": "7.1.2",
-    "@types/node": "20.14.2",
+    "@rightcapital/prettier-config": "7.1.3",
+    "@types/node": "20.14.5",
     "@vercel/ncc": "0.38.1",
     "beachball": "2.43.1",
     "commitizen": "4.3.0",
@@ -46,7 +46,7 @@
     "typescript": "5.4.5",
     "vitest": "1.6.0"
   },
-  "packageManager": "pnpm@9.3.0",
+  "packageManager": "pnpm@9.4.0",
   "engines": {
     "node": ">=20.0.0"
   }
