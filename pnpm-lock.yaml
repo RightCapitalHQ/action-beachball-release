@@ -34,8 +34,8 @@ importers:
         specifier: 25.1.1
         version: 25.1.1(eslint@8.57.0)(typescript@5.5.3)
       '@rightcapital/prettier-config':
-        specifier: 7.1.4
-        version: 7.1.4(prettier@3.3.3)
+        specifier: 7.1.5
+        version: 7.1.5(prettier@3.3.3)
       '@types/node':
         specifier: 20.14.11
         version: 20.14.11
@@ -402,8 +402,8 @@ packages:
       eslint: ^8.23.1
       typescript: ^5.0.0
 
-  '@rightcapital/prettier-config@7.1.4':
-    resolution: {integrity: sha512-AZEbxddkRpY+Dxbm1ar9Ud5D/p0J9DYggGjgZTUtMM0FBhDJjVlDkDRbQ8QGXZy3fW73VrAADgnNNK9EjR71dg==}
+  '@rightcapital/prettier-config@7.1.5':
+    resolution: {integrity: sha512-mpbhcZwLGmNAJmXl1VIk5WDP+bR65zVmCS+gcA5QuqFG/6rhA/UDyEzhdfixR5oAZbyb1mIoCibSwgFnE/xNQg==}
     engines: {node: '>=16.0.0'}
     peerDependencies:
       prettier: ^3.0.0
@@ -1659,14 +1659,6 @@ packages:
     resolution: {integrity: sha512-vkcDPrRZo1QZLbn5RLGPpg/WmIQ65qoWWhcGKf/b5eplkkarX0m9z8ppCat4mlOqUsWpyNuYgO3VRyrYHSzX5g==}
     engines: {node: '>= 0.8.0'}
 
-  prettier-plugin-packagejson@2.5.0:
-    resolution: {integrity: sha512-6XkH3rpin5QEQodBSVNg+rBo4r91g/1mCaRwS1YGdQJZ6jwqrg2UchBsIG9tpS1yK1kNBvOt84OILsX8uHzBGg==}
-    peerDependencies:
-      prettier: '>= 1.16.0'
-    peerDependenciesMeta:
-      prettier:
-        optional: true
-
   prettier-plugin-packagejson@2.5.1:
     resolution: {integrity: sha512-6i4PW1KxEA+VrokYNGeI/q8qQX3u5DNBc7eLr9GX4OrvWr9DMls1lhbuNopkKG7Li9rTNxerWnYQyjxoUO4ROA==}
     peerDependencies:
@@ -1887,10 +1879,6 @@ packages:
   supports-preserve-symlinks-flag@1.0.0:
     resolution: {integrity: sha512-ot0WnXS9fgdkgIcePe6RHNk1WA8+muPa6cSjeR3V8K27q9BB1rTE3R1p7Hv0z1ZyAc8s6Vvv8DIyWf681MAt0w==}
     engines: {node: '>= 0.4'}
-
-  synckit@0.9.0:
-    resolution: {integrity: sha512-7RnqIMq572L8PeEzKeBINYEJDDxpcH8JEgLwUqBd3TkofhFRbkq4QLR0u+36avGAhCRbk2nnmjcW9SE531hPDg==}
-    engines: {node: ^14.18.0 || >=16.0.0}
 
   synckit@0.9.1:
     resolution: {integrity: sha512-7gr8p9TQP6RAHusBOSLs46F4564ZrjV8xFmw5zCmgmhGUcw2hxsShhJ6CEiHQMgPDwAQ1fWHPM0ypc4RMAig4A==}
@@ -2455,10 +2443,10 @@ snapshots:
       - eslint-import-resolver-webpack
       - supports-color
 
-  '@rightcapital/prettier-config@7.1.4(prettier@3.3.3)':
+  '@rightcapital/prettier-config@7.1.5(prettier@3.3.3)':
     dependencies:
       prettier: 3.3.3
-      prettier-plugin-packagejson: 2.5.0(prettier@3.3.3)
+      prettier-plugin-packagejson: 2.5.1(prettier@3.3.3)
 
   '@rollup/rollup-android-arm-eabi@4.14.0':
     optional: true
@@ -3798,13 +3786,6 @@ snapshots:
 
   prelude-ls@1.2.1: {}
 
-  prettier-plugin-packagejson@2.5.0(prettier@3.3.3):
-    dependencies:
-      sort-package-json: 2.10.0
-      synckit: 0.9.0
-    optionalDependencies:
-      prettier: 3.3.3
-
   prettier-plugin-packagejson@2.5.1(prettier@3.3.3):
     dependencies:
       sort-package-json: 2.10.0
@@ -4007,11 +3988,6 @@ snapshots:
       has-flag: 4.0.0
 
   supports-preserve-symlinks-flag@1.0.0: {}
-
-  synckit@0.9.0:
-    dependencies:
-      '@pkgr/core': 0.1.1
-      tslib: 2.6.2
 
   synckit@0.9.1:
     dependencies:
