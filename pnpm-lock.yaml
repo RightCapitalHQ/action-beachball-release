@@ -34,8 +34,8 @@ importers:
         specifier: 25.1.1
         version: 25.1.1(eslint@8.57.0)(typescript@5.5.4)
       '@rightcapital/prettier-config':
-        specifier: 7.1.5
-        version: 7.1.5(prettier@3.3.3)
+        specifier: 7.1.6
+        version: 7.1.6(prettier@3.3.3)
       '@types/node':
         specifier: 20.14.11
         version: 20.14.11
@@ -402,8 +402,8 @@ packages:
       eslint: ^8.23.1
       typescript: ^5.0.0
 
-  '@rightcapital/prettier-config@7.1.5':
-    resolution: {integrity: sha512-mpbhcZwLGmNAJmXl1VIk5WDP+bR65zVmCS+gcA5QuqFG/6rhA/UDyEzhdfixR5oAZbyb1mIoCibSwgFnE/xNQg==}
+  '@rightcapital/prettier-config@7.1.6':
+    resolution: {integrity: sha512-lxWWUOBHxhQTMppaU2PhMpLe5oUFFQrK9eqC8M4+YP9f6emNrGyZ+MeTvLiiGB6Q6q2tzwZDd90Ey6hBynYLog==}
     engines: {node: '>=16.0.0'}
     peerDependencies:
       prettier: ^3.0.0
@@ -2443,7 +2443,7 @@ snapshots:
       - eslint-import-resolver-webpack
       - supports-color
 
-  '@rightcapital/prettier-config@7.1.5(prettier@3.3.3)':
+  '@rightcapital/prettier-config@7.1.6(prettier@3.3.3)':
     dependencies:
       prettier: 3.3.3
       prettier-plugin-packagejson: 2.5.1(prettier@3.3.3)
