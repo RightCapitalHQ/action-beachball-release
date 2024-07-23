@@ -1,5 +1,6 @@
 import { readFile } from 'node:fs/promises';
-import { relative, dirname } from 'node:path';
+import { dirname, relative } from 'node:path';
+
 import * as core from '@actions/core';
 import * as glob from '@actions/glob';
 import type { ChangelogJson, ChangelogJsonEntry, ChangeType } from 'beachball';
@@ -98,7 +99,7 @@ export async function getChangelogJson({
   let resolvedChangelogJsonPath: string | undefined;
   for await (const changelogJsonPath of globber.globGenerator()) {
     const changelogJson = JSON.parse(
-      await readFile(changelogJsonPath, 'utf-8'),
+      await readFile(changelogJsonPath, 'utf8'),
     ) as ChangelogJson;
 
     if (changelogJson.name !== name) {
