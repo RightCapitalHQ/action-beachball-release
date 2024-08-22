@@ -36,7 +36,7 @@
     "@rightcapital/prettier-config": "7.1.6",
     "@types/node": "20.16.1",
     "@vercel/ncc": "0.38.1",
-    "beachball": "2.44.0",
+    "beachball": "2.44.1",
     "commitizen": "4.3.0",
     "concurrently": "8.2.2",
     "eslint": "8.57.0",
@@ -46,7 +46,7 @@
     "typescript": "5.5.4",
     "vitest": "1.6.0"
   },
-  "packageManager": "pnpm@9.7.1",
+  "packageManager": "pnpm@9.8.0",
   "engines": {
     "node": ">=20.0.0"
   }
