@@ -1,4 +1,5 @@
 import { describe, test } from 'vitest';
+
 import { type IParseGitTagResult, parseGitTag } from './util';
 
 describe.concurrent('parseGitTag', () => {
