@@ -1,5 +1,6 @@
 import * as core from '@actions/core';
 import { exec } from '@actions/exec';
+
 import { generateReleaseNotes, getChangelogJson, parseGitTag } from './util';
 
 const token = core.getInput('token', { required: true });
