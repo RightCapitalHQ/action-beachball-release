@@ -31,8 +31,8 @@ importers:
         specifier: 37.0.2
         version: 37.0.2(@typescript-eslint/parser@8.0.1(eslint@9.13.0(jiti@1.21.0))(typescript@5.7.2))(eslint-plugin-import@2.31.0(@typescript-eslint/parser@8.0.1(eslint@9.13.0(jiti@1.21.0))(typescript@5.7.2))(eslint@9.13.0(jiti@1.21.0)))(eslint@9.13.0(jiti@1.21.0))(typescript@5.7.2)
       '@rightcapital/prettier-config':
-        specifier: 7.1.9
-        version: 7.1.9(prettier@3.4.2)
+        specifier: 7.1.10
+        version: 7.1.10(prettier@3.4.2)
       '@types/node':
         specifier: 22.10.1
         version: 22.10.1
@@ -439,8 +439,8 @@ packages:
     peerDependencies:
       eslint: '>=8.0.0'
 
-  '@rightcapital/prettier-config@7.1.9':
-    resolution: {integrity: sha512-+KT1Y6tkNK68YhwTf2v1EL+01lkfml/9sMWI4+nAMIoml3doKcYaLlBvRjvb49/RiH3JHB0Jq5/+cMEkF/4U1g==}
+  '@rightcapital/prettier-config@7.1.10':
+    resolution: {integrity: sha512-ErIWcWhnHrlO02naicmh035v0ITj/Kgv1tncniwfz3TdkpQQ0vH7egKJREi3Eads6lCB1nJszNHuXYQegD7fFg==}
     engines: {node: '>=16.0.0'}
     peerDependencies:
       prettier: ^3.0.0
@@ -1351,6 +1351,14 @@ packages:
   fastq@1.17.1:
     resolution: {integrity: sha512-sRVD3lWVIXWg6By68ZN7vho9a1pQcN/WBFaAAsDDFzlJjvoGx0P8z7V1t72grFJfJhu3YPZBuu25f7Kaw2jN1w==}
 
+  fdir@6.4.2:
+    resolution: {integrity: sha512-KnhMXsKSPZlAhp7+IjUkRZKPb4fUyccpDrdFXbi4QL1qkmFh9kVY09Yox+n4MaOb3lHZ1Tv829C3oaaXoMYPDQ==}
+    peerDependencies:
+      picomatch: ^3 || ^4
+    peerDependenciesMeta:
+      picomatch:
+        optional: true
+
   figures@3.2.0:
     resolution: {integrity: sha512-yaduQFRKLXYOGgEn6AZau90j3ggSOyiqXU0F9JZfeXYhNa+Jk4X+s45A2zg5jns87GAFa34BBm2kXw4XpNcbdg==}
     engines: {node: '>=8'}
@@ -1497,10 +1505,6 @@ packages:
   globby@11.1.0:
     resolution: {integrity: sha512-jhIXaOzy1sb8IyocaruWSn1TjmnBVs8Ayhcy83rmxNJ8q2uWKCAj3CnJY+KpGSXCueAPc0i05kVvVKtP1t9S3g==}
     engines: {node: '>=10'}
-
-  globby@13.2.2:
-    resolution: {integrity: sha512-Y1zNGV+pzQdh7H39l9zgB4PJqjRNqydvdYCDG4HFXM4XuvSaQQlEc91IU1yALL8gUTDomgBAfz3XJdmUS+oo0w==}
-    engines: {node: ^12.20.0 || ^14.13.1 || >=16.0.0}
 
   gopd@1.0.1:
     resolution: {integrity: sha512-d65bNlIadxvpb/A2abVdlqKqV563juRnZ1Wtk6s1sIR8uNsXR70xqIzVqxVf1eTqDunwT2MkczEeaezCKTZhwA==}
@@ -2096,8 +2100,8 @@ packages:
     resolution: {integrity: sha512-vkcDPrRZo1QZLbn5RLGPpg/WmIQ65qoWWhcGKf/b5eplkkarX0m9z8ppCat4mlOqUsWpyNuYgO3VRyrYHSzX5g==}
     engines: {node: '>= 0.8.0'}
 
-  prettier-plugin-packagejson@2.5.3:
-    resolution: {integrity: sha512-ATMEEXr+ywls1kgrZEWl4SBPEm0uDdyDAjyNzUC0/Z8WZTD3RqbJcQDR+Dau+wYkW9KHK6zqQIsFyfn+9aduWg==}
+  prettier-plugin-packagejson@2.5.6:
+    resolution: {integrity: sha512-TY7KiLtyt6Tlf53BEbXUWkN0+TRdHKgIMmtXtDCyHH6yWnZ50Lwq6Vb6lyjapZrhDTXooC4EtlY5iLe1sCgi5w==}
     peerDependencies:
       prettier: '>= 1.16.0'
     peerDependenciesMeta:
@@ -2274,15 +2278,11 @@ packages:
     resolution: {integrity: sha512-g9Q1haeby36OSStwb4ntCGGGaKsaVSjQ68fBxoQcutl5fS1vuY18H3wSt3jFyFtrkx+Kz0V1G85A4MyAdDMi2Q==}
     engines: {node: '>=8'}
 
-  slash@4.0.0:
-    resolution: {integrity: sha512-3dOsAHXXUkQTpOYcoAxLIorMTp4gIQr5IW3iVb7A7lFIp0VHhnynm9izx6TssdrIcVIESAlVjtnO2K8bg+Coew==}
-    engines: {node: '>=12'}
-
   sort-object-keys@1.1.3:
     resolution: {integrity: sha512-855pvK+VkU7PaKYPc+Jjnmt4EzejQHyhhF33q31qG8x7maDzkeFhAAThdCYay11CISO+qAMwjOBP+fPZe0IPyg==}
 
-  sort-package-json@2.10.1:
-    resolution: {integrity: sha512-d76wfhgUuGypKqY72Unm5LFnMpACbdxXsLPcL27pOsSrmVqH3PztFp1uq+Z22suk15h7vXmTesuh2aEjdCqb5w==}
+  sort-package-json@2.12.0:
+    resolution: {integrity: sha512-/HrPQAeeLaa+vbAH/znjuhwUluuiM/zL5XX9kop8UpDgjtyWKt43hGDk2vd/TBdDpzIyzIHVUgmYofzYrAQjew==}
     hasBin: true
 
   source-map-js@1.2.0:
@@ -2398,6 +2398,10 @@ packages:
 
   tinyexec@0.3.1:
     resolution: {integrity: sha512-WiCJLEECkO18gwqIp6+hJg0//p23HXp4S+gGtAKu3mI2F2/sXC4FvHvXvB0zJVVaTPhx1/tOwdbRsa1sOBIKqQ==}
+
+  tinyglobby@0.2.10:
+    resolution: {integrity: sha512-Zc+8eJlFMvgatPZTl6A9L/yht8QqdmUNtURHaKZLmKBE12hNPSrqNkUp2cs3M/UKmNVVAMFQYSjYIVHDjW5zew==}
+    engines: {node: '>=12.0.0'}
 
   tinypool@1.0.1:
     resolution: {integrity: sha512-URZYihUbRPcGv95En+sz6MfghfIc2OJ1sv/RmhWZLouPY0/8Vo80viwPvg3dlaS9fuq7fQMEfgRRK7BBZThBEA==}
@@ -3107,10 +3111,10 @@ snapshots:
       - supports-color
       - typescript
 
-  '@rightcapital/prettier-config@7.1.9(prettier@3.4.2)':
+  '@rightcapital/prettier-config@7.1.10(prettier@3.4.2)':
     dependencies:
       prettier: 3.4.2
-      prettier-plugin-packagejson: 2.5.3(prettier@3.4.2)
+      prettier-plugin-packagejson: 2.5.6(prettier@3.4.2)
 
   '@rollup/rollup-android-arm-eabi@4.14.0':
     optional: true
@@ -4295,6 +4299,10 @@ snapshots:
     dependencies:
       reusify: 1.0.4
 
+  fdir@6.4.2(picomatch@4.0.2):
+    optionalDependencies:
+      picomatch: 4.0.2
+
   figures@3.2.0:
     dependencies:
       escape-string-regexp: 1.0.5
@@ -4470,14 +4478,6 @@ snapshots:
       ignore: 5.3.1
       merge2: 1.4.1
       slash: 3.0.0
-
-  globby@13.2.2:
-    dependencies:
-      dir-glob: 3.0.1
-      fast-glob: 3.3.2
-      ignore: 5.3.1
-      merge2: 1.4.1
-      slash: 4.0.0
 
   gopd@1.0.1:
     dependencies:
@@ -5019,9 +5019,9 @@ snapshots:
 
   prelude-ls@1.2.1: {}
 
-  prettier-plugin-packagejson@2.5.3(prettier@3.4.2):
+  prettier-plugin-packagejson@2.5.6(prettier@3.4.2):
     dependencies:
-      sort-package-json: 2.10.1
+      sort-package-json: 2.12.0
       synckit: 0.9.2
     optionalDependencies:
       prettier: 3.4.2
@@ -5202,20 +5202,18 @@ snapshots:
 
   slash@3.0.0: {}
 
-  slash@4.0.0: {}
-
   sort-object-keys@1.1.3: {}
 
-  sort-package-json@2.10.1:
+  sort-package-json@2.12.0:
     dependencies:
       detect-indent: 7.0.1
       detect-newline: 4.0.1
       get-stdin: 9.0.0
       git-hooks-list: 3.1.0
-      globby: 13.2.2
       is-plain-obj: 4.1.0
       semver: 7.6.3
       sort-object-keys: 1.1.3
+      tinyglobby: 0.2.10
 
   source-map-js@1.2.0: {}
 
@@ -5318,6 +5316,11 @@ snapshots:
   tinybench@2.9.0: {}
 
   tinyexec@0.3.1: {}
+
+  tinyglobby@0.2.10:
+    dependencies:
+      fdir: 6.4.2(picomatch@4.0.2)
+      picomatch: 4.0.2
 
   tinypool@1.0.1: {}
 
