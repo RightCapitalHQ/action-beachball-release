@@ -40,8 +40,8 @@ importers:
         specifier: 0.38.3
         version: 0.38.3
       beachball:
-        specifier: 2.53.0
-        version: 2.53.0(typescript@5.8.3)
+        specifier: 2.54.0
+        version: 2.54.0(typescript@5.8.3)
       commitizen:
         specifier: 4.3.1
         version: 4.3.1(@types/node@22.14.1)(typescript@5.8.3)
@@ -783,8 +783,8 @@ packages:
   base64-js@1.5.1:
     resolution: {integrity: sha512-AKpaYlHn8t4SVbOHCy+b5+KKgvR4vrsD8vbvrbiQJps7fKDTkjkDry6ji0rUJjC0kzbNePLwzxq8iypo41qeWA==}
 
-  beachball@2.53.0:
-    resolution: {integrity: sha512-ySnz8FcbPJbHBiF79CvsVccidVTwnvNysKzfKpScey1XWmCxFVvHlgzbBD+fRln41eJrBDeh6QuL6qeTfxkTHQ==}
+  beachball@2.54.0:
+    resolution: {integrity: sha512-1c6guGSvI1MtMYWDQqzztvqRGoxR6I4GoePA3HlWQJav1NsK5kw1iGOUD9MKRbM+Tr3k1KwrwXIHisqXjYF98g==}
     engines: {node: '>=14.0.0'}
     hasBin: true
 
@@ -3482,7 +3482,7 @@ snapshots:
 
   base64-js@1.5.1: {}
 
-  beachball@2.53.0(typescript@5.8.3):
+  beachball@2.54.0(typescript@5.8.3):
     dependencies:
       cosmiconfig: 8.3.6(typescript@5.8.3)
       execa: 5.1.1
