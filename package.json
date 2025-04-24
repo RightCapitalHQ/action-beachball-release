@@ -33,7 +33,7 @@
     "@commitlint/cz-commitlint": "19.8.0",
     "@rightcapital/eslint-config": "37.0.2",
     "@rightcapital/prettier-config": "7.2.1",
-    "@types/node": "22.14.1",
+    "@types/node": "22.15.0",
     "@vercel/ncc": "0.38.3",
     "beachball": "2.54.0",
     "commitizen": "4.3.1",
