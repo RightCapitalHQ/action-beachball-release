@@ -28,12 +28,12 @@
     "@actions/glob": "0.5.0"
   },
   "devDependencies": {
-    "@commitlint/cli": "19.8.0",
-    "@commitlint/config-conventional": "19.8.0",
-    "@commitlint/cz-commitlint": "19.8.0",
+    "@commitlint/cli": "19.8.1",
+    "@commitlint/config-conventional": "19.8.1",
+    "@commitlint/cz-commitlint": "19.8.1",
     "@rightcapital/eslint-config": "37.0.2",
     "@rightcapital/prettier-config": "7.2.1",
-    "@types/node": "22.15.15",
+    "@types/node": "22.15.16",
     "@vercel/ncc": "0.38.3",
     "beachball": "2.54.0",
     "commitizen": "4.3.1",
